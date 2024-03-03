@@ -10,9 +10,40 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "Enter a description of your project:",
+    message: "What is your project?",
   },
-  // add more questions here (i.e. installation, usage, etc.)
+  {
+    type: "input",
+    name: "installation",
+    message: "How do you install it?",
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "How do you use it?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "How would someone contribute to it?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message:
+      "Are there any tests for your project and if so, how do you run them?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?",
+  },
+  {
+    type: "input",
+    name: "github",
+    message: "What is your GitHub username?",
+  },
+  // add more questions here
 ];
 
 function generateReadme(answers) {
@@ -51,7 +82,7 @@ function generateReadme(answers) {
     ## Questions
     If you have any questions, please contact me at [${answers.email}](mailto:${answers.email}). Find more of my work at [${answers.github}](https://github.com/${answers.github}).
     `
-    .replace(/^\s*[\r\n]/gm, "")
+    .replace(/^\s+/gm, "")
     .trim();
 }
 
