@@ -23,6 +23,12 @@ const questions = [
     message: "How do you use it?",
   },
   {
+    type: "list",
+    name: "license",
+    message: "Which license will you need?",
+    choices: ["MIT", "Apache 2.0", "GPLv3", "BSD 3-Clause", "None"],
+  },
+  {
     type: "input",
     name: "contributing",
     message: "How would someone contribute to it?",
@@ -49,6 +55,13 @@ const questions = [
 function generateReadme(answers) {
   // README content is generated using template literals
   // customize table of contents
+  let licenseBadge = "";
+  let licenseNotice = "";
+
+  if (answers.license !== "None") {
+    licenseBadge = `![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license.replace(/ /g, '_')}-blue.svg)`;
+    licenseNotice = `This project is licensed under ${answers.license} license.`;
+  }
   return `
     # ${answers.title}
     
