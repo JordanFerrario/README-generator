@@ -10,7 +10,7 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "What is your project?",
+    message: "What is your project about?",
   },
   {
     type: "input",
@@ -49,21 +49,24 @@ const questions = [
     name: "github",
     message: "What is your GitHub username?",
   },
-  // add more questions here
 ];
 
 function generateReadme(answers) {
-  // README content is generated using template literals
-  // customize table of contents
   let licenseBadge = "";
   let licenseNotice = "";
 
   if (answers.license !== "None") {
-    licenseBadge = `![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license.replace(/ /g, '_')}-blue.svg)`;
+    licenseBadge = `![License: ${
+      answers.license
+    }](https://img.shields.io/badge/License-${answers.license.replace(
+      / /g,
+      "_"
+    )}-blue.svg)`;
     licenseNotice = `This project is licensed under ${answers.license} license.`;
   }
   return `
     # ${answers.title}
+    ${licenseBadge}
     
     ## Description
     ${answers.description}
@@ -83,8 +86,7 @@ function generateReadme(answers) {
     ${answers.usage}
 
     ## License
-    ![License Badge](insert url for license badge)
-    This project is licensed under the ${answers.license} license.
+    ${licenseNotice}
 
     ## Contributing
     ${answers.contributing}
