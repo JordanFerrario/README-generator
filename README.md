@@ -25,7 +25,7 @@ Clone this repository to your local machine using whatever method you prefer.
 
 ## Usage
 
-Inside your terminal, run the command `node index.js`.
+Inside your terminal, run the command `npm i` followed by `node index.js`.
 
 ## License
 
