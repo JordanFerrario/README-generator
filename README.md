@@ -8,11 +8,16 @@ A command-line application that dynamically generates a professional README.md f
 
 ## Table of Contents
 
+- [Walkthrough](#walkthrough)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
+
+## Walkthrough Video
+
+[![A screenshot of Visual Studio Code showing a javscript file for a README generator]](./assets/imgs/walkthrough-thumbnail.png)(https://youtu.be/fvLHDGcaufo)
 
 ## Installation
 
